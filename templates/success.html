@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-black via-gray-900 to-gray-800">
+    <div id="successBox" class="text-center text-white opacity-0 transform scale-50 transition-all duration-500 ease-out">
+      <!-- Success Icon (optional) -->
+      <div class="flex justify-center mb-4">
+        <svg class="w-16 h-16 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1.293-7.707a1 1 0 111.414-1.414L10 9.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      <!-- End Icon -->
+  
+      <h1 class="text-4xl font-bold">Login Successful!</h1>
+      <p class="mt-4">Welcome to NETNOOK You have successfully logged in.</p>
+      <a href="/" class="mt-6 inline-block bg-white text-red-500 font-bold py-2 px-4 rounded">Go to Home</a>
+    </div>
+  </div>
+  
+  <!-- Animation Script -->
+  <script>
+    // Run animation when the page is loaded
+    window.onload = function() {
+      var successBox = document.getElementById('successBox');
+      // Add classes to animate
+      successBox.classList.remove('opacity-0', 'scale-50');
+      successBox.classList.add('opacity-100', 'scale-100');
+    };
+  </script>
+  
+{% endblock %}
